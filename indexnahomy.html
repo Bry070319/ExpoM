@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PomPomPurin Premium ✨</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#fff8d6,#ffe082,#ffd54f,#fff3b0);
+background-size:400% 400%;
+animation:fondo 15s ease infinite;
+overflow-x:hidden;
+color:#5d4037;
+}
+
+@keyframes fondo{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* Partículas */
+
+.particula{
+position:fixed;
+font-size:2rem;
+animation:subir linear infinite;
+opacity:.2;
+pointer-events:none;
+z-index:-1;
+}
+
+@keyframes subir{
+from{
+transform:translateY(100vh) rotate(0deg);
+}
+to{
+transform:translateY(-120vh) rotate(360deg);
+}
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.hero{
+background:rgba(255,255,255,.3);
+backdrop-filter:blur(20px);
+padding:50px;
+border-radius:40px;
+box-shadow:
+0 0 30px rgba(255,255,255,.5),
+0 20px 60px rgba(0,0,0,.15);
+max-width:900px;
+animation:entrada 1.2s ease;
+}
+
+@keyframes entrada{
+from{
+opacity:0;
+transform:translateY(80px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+font-size:10rem;
+animation:flotar 3s ease-in-out infinite;
+filter:drop-shadow(0 0 20px gold);
+}
+
+@keyframes flotar{
+50%{
+transform:translateY(-20px);
+}
+}
+
+h1{
+font-size:5rem;
+font-weight:900;
+background:linear-gradient(90deg,#ffb300,#ff6f00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+p{
+font-size:1.2rem;
+margin-top:20px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:18px 40px;
+border-radius:60px;
+text-decoration:none;
+color:white;
+font-weight:700;
+background:linear-gradient(45deg,#ffb300,#ff6f00);
+box-shadow:0 10px 30px rgba(255,152,0,.4);
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 20px 40px rgba(255,152,0,.6);
+}
+
+section{
+padding:120px 10%;
+}
+
+.titulo{
+font-size:3.5rem;
+text-align:center;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,.4);
+backdrop-filter:blur(15px);
+border-radius:30px;
+padding:35px;
+text-align:center;
+transition:.5s;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.card:hover{
+transform:translateY(-15px) rotate(2deg);
+}
+
+.card span{
+font-size:5rem;
+}
+
+.card h3{
+margin:20px 0;
+font-size:1.8rem;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.caja{
+height:280px;
+border-radius:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:7rem;
+background:rgba(255,255,255,.5);
+backdrop-filter:blur(10px);
+transition:.5s;
+cursor:pointer;
+}
+
+.caja:hover{
+transform:scale(1.08) rotate(3deg);
+box-shadow:0 0 40px gold;
+}
+
+.estadisticas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.numero{
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.numero h2{
+font-size:4rem;
+color:#ff9800;
+}
+
+footer{
+padding:50px;
+text-align:center;
+background:rgba(255,255,255,.4);
+backdrop-filter:blur(10px);
+}
+
+.corazon{
+display:inline-block;
+animation:latido 1s infinite;
+}
+
+@keyframes latido{
+50%{
+transform:scale(1.4);
+}
+}
+
+.galeria-pompom{
+    padding:100px 10%;
+}
+
+.galeria-pompom h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.contenedor-img{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.imagen{
+    height:280px;
+    border-radius:30px;
+    overflow:hidden;
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.imagen:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px gold;
+}
+
+.imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+</style>
+</head>
+<body>
+
+<div class="particula" style="left:5%;animation-duration:12s;">🍮</div>
+<div class="particula" style="left:20%;animation-duration:18s;">⭐</div>
+<div class="particula" style="left:40%;animation-duration:14s;">🐾</div>
+<div class="particula" style="left:60%;animation-duration:16s;">💛</div>
+<div class="particula" style="left:80%;animation-duration:20s;">🧸</div>
+
+<header>
+<div class="hero">
+<div class="logo">🍮</div>
+
+<h1>PomPomPurin</h1>
+
+<p>
+El rey de la ternura. Un adorable golden retriever amante de los
+postres, las siestas y las aventuras con amigos.
+</p>
+
+<a href="#info" class="btn">✨ Explorar ✨</a>
+</div>
+</header>
+
+<section id="info">
+<h2 class="titulo">🌟 Razones para Amarlo</h2>
+
+<div class="cards">
+
+<div class="card">
+<span>🐶</span>
+<h3>Adorable</h3>
+<p>Uno de los personajes más tiernos jamás creados.</p>
+</div>
+
+<div class="card">
+<span>🍮</span>
+<h3>Único</h3>
+<p>Inspirado en un delicioso pudín de caramelo.</p>
+</div>
+
+<div class="card">
+<span>💛</span>
+<h3>Amistoso</h3>
+<p>Siempre comparte alegría con todos.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="titulo">📸 Mundo Kawaii</h2>
+
+<div class="galeria">
+<div class="caja">🍮</div>
+<div class="caja">💛</div>
+<div class="caja">🐾</div>
+<div class="caja">🧸</div>
+</div>
+</section>
+
+<section>
+<h2 class="titulo">🏆 Nivel de Ternura</h2>
+
+<div class="estadisticas">
+
+<div class="numero">
+<h2>100%</h2>
+<p>Tierno</p>
+</div>
+
+<div class="numero">
+<h2>999+</h2>
+<p>Abrazos</p>
+</div>
+
+<div class="numero">
+<h2>∞</h2>
+<p>Felicidad</p>
+</div>
+
+<div class="numero">
+<h2>24/7</h2>
+<p>Kawaii</p>
+</div>
+<section class="galeria-pompom">
+    <h2>📸 Galería de PomPomPurin</h2>
+
+    <div class="contenedor-img">
+        <div class="imagen">
+            <img src="https://files.merca20.com/uploads/2024/11/pompompurin-sanrio-personajes-310x174.jpg" alt="PomPomPurin 1">
+        </div>
+
+        <div class="imagen">
+            <img src="https://zula.sg/wp-content/uploads/2024/11/pompompurin-e1730963685568.jpg" alt="PomPomPurin 2">
+        </div>
+
+        <div class="imagen">
+            <img src="https://i.pinimg.com/736x/3d/32/ec/3d32ec980ea469bf0ebdcfa725b80c08.jpg" alt="PomPomPurin 3">
+        </div>
+
+        <div class="imagen">
+            <img src="https://i.pinimg.com/736x/cb/9c/ce/cb9ccefdd6b9f4a03d372415b6075acc.jpg" alt="PomPomPurin 4">
+        </div>
+
+        <div class="imagen">
+            <img src="https://i.pinimg.com/originals/59/c0/5a/59c05a83f4130bf5cdc85546e9a8ec87.jpg" alt="PomPomPurin 5">
+        </div>
+
+        <div class="imagen">
+            <img src="https://i.pinimg.com/736x/c8/a6/b4/c8a6b40052b20e30b63dafd6a904b8da.jpg" alt="Xavier bernal">
+        </div>
+    </div>
+</section>
+
+</div>
+</section>
+
+<footer>
+Hecho con <span class="corazon">💛</span> para los mayores fans de PomPomPurin
+</footer>
+
+</body>
+</html>
