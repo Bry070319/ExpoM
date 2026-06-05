@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Miguel — El Sol de México — Edición de Lujo</title>
+    <link rel="stylesheet" href="styleChris.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>hola</h1>
+    <button id="theme-toggle" class="theme-btn">☀️ Atmósfera Atardecer</button>
+    <button id="mic-btn" class="mic-float" title="Mensaje de El Sol">🎙️</button>
+    <div id="toast" class="toast-msg">Bienvenido a la experiencia.</div>
+
+    <header>
+        <div class="header-overlay">
+            <p class="header-pretitle">Una Leyenda Musical</p>
+            <h1>Luis Miguel</h1>
+            <div class="header-divider"></div>
+            <p class="subtitle">El Sol de México</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#biografia">La Leyenda</a>
+            <a href="#favorita">Sol, Arena y Mar</a>
+            <a href="#discografia-completa">Antología de Álbumes</a>
+            <a href="#legado">El Legado</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- SECCIÓN: BIOGRAFÍA DETALLADA -->
+        <section id="biografia" class="glass-card page-section">
+            <div class="section-header">
+                <span class="section-tag">Perfil</span>
+                <h2>La Trayectoria de una Voz Inigualable</h2>
+            </div>
+            <div class="bio-content">
+                <div class="bio-image animated-frame">
+                    <img src="https://i5.walmartimages.com/asr/d4123ff7-f5c0-4ebc-99b1-452be1d475ce.95e4df8333df6525de919004f434f051.jpeg" alt="Luis Miguel en gala">
+                </div>
+                <div class="bio-text">
+                    <p>Luis Miguel Gallego Basteri no es solo un cantante; es el fenómeno cultural más imponente de la música en español. Nacido el 19 de abril de 1970, su voz privilegiada y su magnetismo escénico lo catapultaron a la fama desde los once años, convirtiéndose en el artista más joven en ganar un Grammy a los catorce.</p>
+                    <p>A lo largo de más de cuatro décadas, ha desafiado las barreras de los géneros musicales, transitando con total maestría y elegancia entre el pop indomable, la intimidad del bolero clásico, la grandiosidad del mariachi tradicional y las complejas texturas del jazz y las Big Bands.</p>
+                    <p>Su mística indisoluble con los atardeceres dorados de Acapulco definió el estándar de la sofisticación latina en los años 80 y 90, creando una estética visual y sonora que evoca de manera perpetua el lujo, la brisa marina, los romances veraniegos y una eterna elegancia tropical.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CANCIÓN FAVORITA -->
+        <section id="favorita" class="glass-card featured-song page-section">
+            <div class="section-header">
+                <span class="section-tag">Joyas Musicales</span>
+                <h2>La Banda Sonora del Verano Eterno</h2>
+            </div>
+            <div class="featured-content">
+                <div class="featured-text">
+                    <h3>Sol, Arena y Mar</h3>
+                    <p class="song-desc">Publicado en 1999 como la carta de presentación del laureado álbum <em>Amarte es un placer</em>, este corte representa la cúspide del pop sofisticado. Coescrito por el propio Luis Miguel junto a su eterno colaborador Francisco Loyo, es una obra maestra del funk-pop latino con arreglos de viento espectaculares que encapsulan perfectamente el glamour de una puesta de sol frente al mar.</p>
+                    
+                    <div class="player-container">
+                        <div class="player-controls">
+                            <button id="play-btn" class="player-btn">▶️</button>
+                            <div class="track-info">
+                                <span class="track-title">Sol, Arena y Mar — Remastered</span>
+                                <div class="progress-bar"><div id="progress" class="progress"></div></div>
+                            </div>
+                        </div>
+                        <div id="equalizer" class="equalizer">
+                            <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                        </div>
+                    </div>
+
+                    <div class="interaction-zone">
+                        <button id="like-btn" class="like-btn">❤️ <span id="like-count">3.405</span> Cliks de Amor</button>
+                    </div>
+                </div>
+                <div class="featured-image animated-frame">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=600&q=80" alt="Costa de Acapulco">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: ANTOLOGÍA COMPLETA DE ÁLBUMES -->
+        <section id="discografia-completa" class="glass-card page-section">
+            <div class="section-header">
+                <span class="section-tag">Cronología Histórica</span>
+                <h2>Antología de Álbumes de Estudio</h2>
+                <p class="section-subtitle">Un recorrido pormenorizado por las producciones que moldearon la música hispana.</p>
+            </div>
+
+            <div class="album-timeline">
+                
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1982</span>
+                        <h4 class="album-title">Un Sol</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> El álbum debut que dio inicio a la leyenda. Un proyecto concebido bajo la estricta dirección de su padre, Luisito Rey, diseñado para presentar al mundo a un niño prodigio de voz descomunal.</p>
+                        <p><strong>Colaboradores clave:</strong> Honorio Herrero y Luisito Rey.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1983</span>
+                        <h4 class="album-title">Directo al corazón</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Consolidó rápidamente su éxito en América Latina. Un disco cargado de baladas infantiles e himnos pop rítmicos que capitalizaron su avasallante carisma televisivo.</p>
+                        <p><strong>Colaboradores clave:</strong> Honorio Herrero y Luis Gómez-Escolar.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1984</span>
+                        <h4 class="album-title">Palabra de honor</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> El disco de transición hacia su adolescencia. Mostró una madurez vocal impactante con baladas desgarradoras y pop bailable, cerrando su etapa de niño prodigio.</p>
+                        <p><strong>Colaboradores clave:</strong> Honorio Herrero y Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1987</span>
+                        <h4 class="album-title">Soy como quiero ser</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Su debut con Warner Music y el inicio de su alianza dorada con Juan Carlos Calderón. El disco incluyó magistrales adaptaciones de clásicos en inglés y marcó su explosión definitiva en el mercado maduro con "Cuando calienta el sol".</p>
+                        <p><strong>Colaboradores clave:</strong> Juan Carlos Calderón (Productor ejecutivo).</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1988</span>
+                        <h4 class="album-title">Busca una mujer</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Uno de los discos más vendidos de la historia de México. Impulsado por el arrollador éxito de "La Incondicional", el álbum entrelazó baladas sinfónicas perfectas con sutiles toques de pop rock.</p>
+                        <p><strong>Colaboradores clave:</strong> Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1990</span>
+                        <h4 class="album-title">20 años</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Diseñado para celebrar su transición a la edad adulta. Batió récords de preventa gracias a una producción impecable repleta de baladas épicas y ritmos uptempo de influencia americana.</p>
+                        <p><strong>Colaboradores clave:</strong> Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1991</span>
+                        <h4 class="album-title">Romance</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Una de las decisiones más arriesgadas e brillantes de su carrera. Luis Miguel revivió el bolero clásico para las nuevas generaciones, vendiendo más de 15 millones de copias a nivel mundial y redefiniendo su elegancia escénica.</p>
+                        <p><strong>Colaboradores clave:</strong> Armando Manzanero (Co-producción) y Bebu Silvetti.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1993</span>
+                        <h4 class="album-title">Aries</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Tras el éxito de los boleros, regresó al pop sofisticado tomando el control total de la producción. Un álbum magistral impregnado de Funk, R&B de vanguardia y baladas románticas memorables.</p>
+                        <p><strong>Colaboradores clave:</strong> Kiko Cibrián, Rudy Pérez y David Foster.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1994</span>
+                        <h4 class="album-title">Segundo Romance</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> La esperada secuela de su proyecto de boleros. Grabado directamente en Los Ángeles, debutó en los puestos más altos de la lista Billboard y le otorgó un nuevo premio Grammy.</p>
+                        <p><strong>Colaboradores clave:</strong> Armando Manzanero, Kiko Cibrián y Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1996</span>
+                        <h4 class="album-title">Nada es igual</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Un proyecto pop cargado de madurez lírica, grabado tras recibir su estrella en el Paseo de la Fama de Hollywood. Destaca por sus sofisticadas rítmicas de influencia R&B contemporáneo.</p>
+                        <p><strong>Colaboradores clave:</strong> Kiko Cibrián (Arreglos y producción).</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1997</span>
+                        <h4 class="album-title">Romances</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Tercera entrega de la antología de boleros. Con una fastuosa producción orquestal que incluyó más de 60 músicos, el álbum es ampliamente elogiado por su pulcritud técnica e instrumentación analógica de lujo.</p>
+                        <p><strong>Colaboradores clave:</strong> Armando Manzanero y Bebu Silvetti.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">1999</span>
+                        <h4 class="album-title">Amarte es un placer</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Considerado por críticos como su trabajo pop más refinado y lujoso. Luis Miguel se involucró al máximo en la composición para concebir canciones con complejas orquestaciones, metales imponentes y vibras de playa sofisticada.</p>
+                        <p><strong>Colaboradores clave:</strong> Juan Carlos Calderón, Francisco Loyo y Arturo Sandoval.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2001</span>
+                        <h4 class="album-title">Mis Romances</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Cuarto capítulo de su saga de oro. Grabado junto a la prestigiosa Royal Philharmonic Orchestra de Londres, presentó majestuosas interpretaciones de la música romántica del siglo XX.</p>
+                        <p><strong>Colaboradores clave:</strong> Bebu Silvetti (Arreglos de cuerdas).</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2003</span>
+                        <h4 class="album-title">33</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Titulado así por la edad del cantante en ese momento. Significó un nostálgico regreso al pop-latino clásico y directo de finales de los años ochenta, lleno de baladas de corte desgarrador.</p>
+                        <p><strong>Colaboradores clave:</strong> Armando Manzanero y Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2004</span>
+                        <h4 class="album-title">México en la piel</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Su primer álbum íntegramente dedicado al género del Mariachi. Un hito que vendió millones de copias, vistiendo la música folclórica con trajes de gala y ganando los premios Grammy y Latin Grammy.</p>
+                        <p><strong>Colaboradores clave:</strong> Mariachi Vargas de Tecalitlán.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2006</span>
+                        <h4 class="album-title">Navidades</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Una fina colección de clásicos navideños norteamericanos adaptados magistralmente al español con arreglos Big Band y jazz tradicional.</p>
+                        <p><strong>Colaboradores clave:</strong> Juan Carlos Calderón.</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2008</span>
+                        <h4 class="album-title">Cómplices</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Un elegante álbum conceptual cuyas composiciones corrieron enteramente a cargo del maestro Manuel Alejandro, retratando el lado más íntimo y maduro del artista.</p>
+                        <p><strong>Colaboradores clave:</strong> Manuel Alejandro (Composiciones y arreglos).</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2010</span>
+                        <h4 class="album-title">Luis Miguel</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Lanzado para celebrar sus tres décadas de impecable carrera artística. Reúne canciones enérgicas ideales para sus shows en vivo junto a baladas sofisticadas contemporáneas.</p>
+                        <p><strong>Colaboradores clave:</strong> Lágrimas de Mar (seudónimo de composición de Luis Miguel).</p>
+                    </div>
+                </div>
+
+                <div class="album-node" onclick="highlightAlbum(this)">
+                    <div class="album-meta">
+                        <span class="album-year">2017</span>
+                        <h4 class="album-title">¡México por siempre!</h4>
+                    </div>
+                    <div class="album-body">
+                        <p><strong>El Origen:</strong> Su magistral regreso a los estudios tras varios años de silencio. Una fastuosa celebración de la cultura tradicional mexicana que marcó su regreso triunfal a las listas de éxitos y grandes giras globales.</p>
+                        <p><strong>Colaboradores clave:</strong> Mariachi Vargas de Tecalitlán y David Alsina.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: ESTADÍSTICAS Y LEGADO -->
+        <section id="legado" class="glass-card page-section">
+            <div class="section-header">
+                <span class="section-tag">Cifras</span>
+                <h2>Un Legado Inmortal en Números</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-num">+100M</span>
+                    <span class="stat-desc">Álbumes vendidos a nivel mundial</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">6</span>
+                    <span class="stat-desc">Premios Grammy Anglo</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">6</span>
+                    <span class="stat-desc">Premios Latin Grammy</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">1</span>
+                    <span class="stat-desc">Sol Indestructible</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Página de Alta Costura Digital dedicada a <span>Luis Miguel</span> — Inspirada en el lujo y la brisa eterna de Acapulco</p>
+    </footer>
+
+    <script>
+        // 1. Alternador de Ambientes Dinámicos (Atardecer / Noche Beach Club)
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('night-mode');
+            if(document.body.classList.contains('night-mode')) {
+                themeToggle.innerHTML = "🌙 Atmósfera Noche";
+            } else {
+                themeToggle.innerHTML = "☀️ Atmósfera Atardecer";
+            }
+        });
+
+        // 2. Reproductor Simulador de Audio Profesional
+        const playBtn = document.getElementById('play-btn');
+        const equalizer = document.getElementById('equalizer');
+        const progress = document.getElementById('progress');
+        let isPlaying = false;
+        let progressInterval;
+
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            if(isPlaying) {
+                playBtn.innerHTML = "⏸️";
+                equalizer.classList.add('active');
+                document.body.classList.add('concert-lights');
+                let width = 0;
+                progressInterval = setInterval(() => {
+                    if (width >= 100) width = 0;
+                    width += 0.5;
+                    progress.style.width = width + '%';
+                }, 50);
+            } else {
+                playBtn.innerHTML = "▶️";
+                equalizer.classList.remove('active');
+                document.body.classList.remove('concert-lights');
+                clearInterval(progressInterval);
+            }
+        });
+
+        // 3. Sistema de Interacción con Efecto Destello Solar
+        const likeBtn = document.getElementById('like-btn');
+        const likeCount = document.getElementById('like-count');
+        let liked = false;
+
+        likeBtn.addEventListener('click', (e) => {
+            let currentLikes = parseFloat(likeCount.innerHTML.replace('.', ''));
+            if(!liked) {
+                likeCount.innerHTML = (currentLikes + 1).toLocaleString('es-ES');
+                likeBtn.style.background = "var(--coral-suave)";
+                likeBtn.style.color = "#ffffff";
+                liked = true;
+                generateGoldenConfetti(e.clientX, e.clientY);
+            } else {
+                likeCount.innerHTML = (currentLikes - 1).toLocaleString('es-ES');
+                likeBtn.style.background = "transparent";
+                likeBtn.style.color = "var(--coral-suave)";
+                liked = false;
+            }
+        });
+
+        function generateGoldenConfetti(x, y) {
+            const sparkles = ['#e5c158', '#f3e9dc', '#de6b48', '#ffffff'];
+            for (let i = 0; i < 40; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('confetti');
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.background = sparkles[Math.floor(Math.random() * sparkles.length)];
+                particle.style.setProperty('--x-move', (Math.random() * 300 - 150) + 'px');
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 1500);
+            }
+        }
+
+        // 4. Sistema de Audio-Frases Flotante
+        const micBtn = document.getElementById('mic-btn');
+        const toast = document.getElementById('toast');
+        const quotes = [
+            "«¡¿Cómo dice?! ¡Los oigo!» 🎤",
+            "«¡Arriba Acapulco! Buenas noches, mi gente.» 🌊",
+            "«El amor es un placer, gracias por estar conmigo siempre.» ✨",
+            "«¡Son un público extraordinariamente hermoso!» ❤️",
+            "«¡Suave...! Como la brisa fresca del mar.» ☀️"
+        ];
+
+        micBtn.addEventListener('click', () => {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            toast.innerHTML = randomQuote;
+            toast.classList.add('show');
+            micBtn.style.transform = "scale(1.2) rotate(15deg)";
+            setTimeout(() => {
+                toast.classList.remove('show');
+                micBtn.style.transform = "scale(1) rotate(0deg)";
+            }, 3000);
+        });
+
+        // 5. Interactividad al hacer click en los álbumes
+        function highlightAlbum(element) {
+            element.style.borderColor = "var(--dorado-sol)";
+            setTimeout(() => {
+                element.style.borderColor = "rgba(255,255,255,0.15)";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
