@@ -89,7 +89,7 @@ font-family:'Orbitron';
 font-size:8rem;
 line-height:.9;
 background:linear-gradient(45deg,#ffcc00,#ff4d00,#ff0088);
--webkit-background-clip:text;
+
 -webkit-text-fill-color:transparent;
 }
 
@@ -348,7 +348,7 @@ font-family:'Orbitron';
 font-size:3rem;
 margin-bottom:20px;
 background:linear-gradient(45deg,#ffcc00,#ff0088);
--webkit-background-clip:text;
+
 -webkit-text-fill-color:transparent;
 }
 
