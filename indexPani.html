@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicki Nicole</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(to bottom,#ffffff,#eef8ff);
+    color:#24476b;
+}
+
+/* MENÚ */
+
+nav{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#3aa7ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#24476b;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#3aa7ff;
+}
+
+/* HERO */
+
+.hero{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.hero img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+}
+
+.hero-texto{
+    padding:40px;
+}
+
+.hero-texto h1{
+    font-size:55px;
+    color:#2f7fd4;
+    margin-bottom:15px;
+}
+
+.hero-texto p{
+    font-size:18px;
+    line-height:1.7;
+    color:#5f7d9a;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* TITULOS */
+
+.titulo{
+    text-align:center;
+    font-size:36px;
+    color:#2f7fd4;
+    margin:70px 0 35px;
+}
+
+/* BIOGRAFÍA */
+
+.bio{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.bio p{
+    line-height:1.9;
+    text-align:justify;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(58,167,255,.30);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#2f7fd4;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:70px;
+    background:#2f7fd4;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+}
+
+.hero img{
+    width:100%;
+    height:300px;
+}
+
+.hero-texto{
+    text-align:center;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- MENÚ -->
+
+<nav>
+
+    <div class="logo">Nicki Nicole</div>
+
+    <ul>
+        <li><a href="#bio">Biografía</a></li>
+        <li><a href="#albumes">Álbumes</a></li>
+        <li><a href="#canciones">Canciones</a></li>
+    </ul>
+
+</nav>
+
+<!-- PRESENTACIÓN -->
+
+<section class="hero">
+
+    <!-- CAMBIA ESTA IMAGEN POR UNA FOTO DE NICKI -->
+    <img src="https://img2.rtve.es/imagenes/nicki-nicole-claves-su-gran-2020/1608729436224.jpg" alt="Nicki Nicole">
+
+    <div class="hero-texto">
+        <h1>Nicki Nicole</h1>
+
+        <p>
+            Cantante y compositora argentina reconocida por su estilo único,
+            mezclando trap, rap, R&B y pop urbano. Su talento la ha llevado a
+            convertirse en una de las artistas más importantes de Latinoamérica.
+        </p>
+
+    </div>
+
+</section>
+
+<div class="container">
+
+    <!-- BIO -->
+
+    <h2 class="titulo" id="bio">Biografía</h2>
+
+    <div class="bio">
+
+        <p>
+            Nicki Nicole nació en Rosario, Argentina. Desde sus inicios llamó la
+            atención por su personalidad artística y su voz característica.
+            Con millones de reproducciones en plataformas digitales, ha logrado
+            posicionarse como una de las máximas exponentes de la música urbana
+            latinoamericana, colaborando con artistas reconocidos a nivel
+            internacional.
+        </p>
+
+    </div>
+
+    <!-- ALBUMES -->
+
+    <h2 class="titulo" id="albumes">Álbumes Destacados</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <!-- Cambia por la portada real -->
+            <img src="https://t2.genius.com/unsafe/600x600/https://images.genius.com/26fccaec96c3122b6fa742b269471df3.800x800x1.png" alt="Recuerdos">
+
+            <div class="card-content">
+                <h3>Recuerdos</h3>
+                <p>
+                    Álbum debut de Nicki Nicole que marcó el comienzo
+                    de su ascenso en la escena musical.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <!-- Cambia por la portada real -->
+            <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/7/8/6/2/1181721635519467.jpg" alt="Parte de Mí">
+
+            <div class="card-content">
+                <h3>Parte de Mí</h3>
+                <p>
+                    Uno de sus trabajos más exitosos, con canciones que
+                    alcanzaron millones de reproducciones.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <!-- Cambia por la portada real -->
+            <img src="https://i0.wp.com/imprintent.org/wp-content/uploads/2023/05/Nicki-Nicole-ALMA-artwork.jpeg?fit=1600%2C1600&ssl=1" alt="Alma">
+
+            <div class="card-content">
+                <h3>Alma</h3>
+                <p>
+                    Álbum que mostró una faceta más madura y personal
+                    de la artista.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CANCIONES -->
+
+    <h2 class="titulo" id="canciones">Canciones Populares</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://th.bing.com/th/id/R.448ec148181e195c7df5338938b834b6?rik=pRX7nXf4xOgDkw&pid=ImgRaw&r=0" alt="Wapo Traketero">
+
+            <div class="card-content">
+                <h3>Wapo Traketero</h3>
+                <p>
+                    El tema que impulsó su carrera y la dio a conocer
+                    a una gran audiencia.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://img2.rtve.es/i/?w=1600&i=1621335679674.jpg" alt="Mamichula">
+
+            <div class="card-content">
+                <h3>Mamichula</h3>
+                <p>
+                    Una de las colaboraciones más exitosas de su trayectoria.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://www.bongminesentertainment.com/wp-content/uploads/2024/04/Nicki-Nicole-%E2%80%93-Ojos-Verdes-press-photo-3-768x1152.jpg" alt="Ojos Verdes">
+
+            <div class="card-content">
+                <h3>Ojos Verdes</h3>
+                <p>
+                    Canción que destacó por su estilo diferente y emotivo.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2025 | Página dedicada a Nicki Nicole 🤍💙
+</footer>
+
+</body>
+</html>
+```

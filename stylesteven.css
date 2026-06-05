@@ -1,0 +1,291 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    line-height:1.7;
+}
+
+/* ===== HEADER ===== */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
+    url("img/fondo.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    max-width:900px;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:4rem;
+    margin-bottom:20px;
+
+    background:linear-gradient(
+    90deg,
+    #00ff66,
+    #ffffff,
+    #0066ff,
+    #ff3333);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.overlay p{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+/* ===== BOTONES ===== */
+
+.botones{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-verde,
+.btn-bmw{
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-verde{
+    background:#00ff66;
+    color:black;
+}
+
+.btn-bmw{
+    background:linear-gradient(
+    90deg,
+    #ffffff,
+    #0066ff,
+    #ff3333);
+    color:black;
+}
+
+.btn-verde:hover,
+.btn-bmw:hover{
+    transform:scale(1.08);
+}
+
+/* ===== MENÚ ===== */
+
+nav{
+    background:black;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:3px solid #00ff66;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ff66;
+}
+
+/* ===== SECCIONES ===== */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2.5rem;
+}
+
+/* ===== INTRO ===== */
+
+#inicio{
+    text-align:center;
+}
+
+#inicio p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* ===== KAWASAKI ===== */
+
+#h2r{
+    background:
+    linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),
+    url("img/h2r.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+#h2r h2{
+    color:#00ff66;
+}
+
+/* ===== BMW ===== */
+
+#bmw{
+    background:
+    linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),
+    url("img/bmw.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+#bmw h2{
+    color:#0066ff;
+}
+
+/* ===== TARJETAS ===== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(15,15,15,.85);
+    padding:25px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* ===== TABLA ===== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    padding:15px;
+
+    background:linear-gradient(
+    90deg,
+    #00ff66,
+    #ffffff,
+    #0066ff,
+    #ff3333);
+
+    color:black;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+tr:nth-child(even){
+    background:#151515;
+}
+
+/* ===== GALERÍA ===== */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:40px;
+    border-top:4px solid;
+
+    border-image:
+    linear-gradient(
+    90deg,
+    #00ff66,
+    #ffffff,
+    #0066ff,
+    #ff3333
+    ) 1;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#cccccc;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .overlay h1{
+        font-size:2.8rem;
+    }
+
+    section h2{
+        font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+}
