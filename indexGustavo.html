@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cristiano Ronaldo | CR7</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<h1>Hola</h1>
+
+<style>
+
+:root{
+    --gold:#D4AF37;
+    --gold-light:#FFD700;
+    --black:#0A0A0A;
+    --dark:#111827;
+    --white:#FFFFFF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    color:black;
+    font-weight:700;
+
+    background:linear-gradient(
+    45deg,
+    var(--gold),
+    var(--gold-light)
+    );
+
+    transition:.4s;
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 50px gold;
+
+}
+
+/* SECCIONES */
+
+section{
+    padding:90px 10%;
+}
+
+.titulo{
+    text-align:center;
+    font-size:2.8rem;
+    color:var(--gold);
+    margin-bottom:50px;
+}
+
+/* CARRUSEL */
+
+.carousel{
+    overflow:hidden;
+    border-radius:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    animation:slide 15s infinite;
+}
+
+.slides img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+@keyframes slide{
+
+0%,25%{
+transform:translateX(0);
+}
+
+30%,55%{
+transform:translateX(-33.33%);
+}
+
+60%,85%{
+transform:translateX(-66.66%);
+}
+
+90%,100%{
+transform:translateX(0);
+}
+
+}
+
+/* BIO */
+
+.bio{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.bio img{
+    width:100%;
+    border-radius:20px;
+}
+
+.bio p{
+    line-height:1.9;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--dark);
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    font-size:3rem;
+    color:var(--gold);
+}
+
+/* VIDEO */
+
+.video-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.video-container iframe{
+    width:100%;
+    height:550px;
+    border:none;
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(212,175,55,.4);
+}
+
+/* LOGROS */
+
+.logros{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.logro{
+
+    background:var(--dark);
+
+    padding:25px;
+
+    border-left:5px solid var(--gold);
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.logro:hover{
+    transform:translateY(-8px);
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* BOTON FLOTANTE */
+
+.top-btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+    45deg,
+    var(--gold),
+    var(--gold-light)
+    );
+
+    color:black;
+    font-size:28px;
+    font-weight:bold;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    box-shadow:0 0 20px gold;
+
+    transition:.3s;
+}
+
+.top-btn:hover{
+    transform:scale(1.15);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#050505;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.bio{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.video-container iframe{
+    height:300px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">CR7</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#biografia">Biografía</a></li>
+<li><a href="#estadisticas">Estadísticas</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#logros">Logros</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div>
+
+<h1>Cristiano <span>Ronaldo</span></h1>
+
+<p>
+Una leyenda del fútbol mundial. Conocido por su disciplina,
+talento, liderazgo y capacidad goleadora.
+</p>
+
+<a href="#biografia" class="btn">
+Conocer Más
+</a>
+
+</div>
+
+</section>
+
+<!-- CARRUSEL -->
+
+<section id="galeria" class="reveal">
+
+<h2 class="titulo">
+Momentos Icónicos
+</h2>
+
+<div class="carousel">
+
+<div class="slides">
+
+<img src="https://i.pinimg.com/736x/eb/b2/30/ebb230e4dfd947448ea643fb1663026b.jpg" alt="">
+
+<img src="https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/DTJMYNDJCND3BGXZIMTHJ6CXOE.jpg" alt="">
+
+<img src="https://extra.ie/wp-content/uploads/2019/06/Cristiano-Ronaldo-Nations-League.jpg" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BIO -->
+
+<section id="biografia" class="reveal">
+
+<h2 class="titulo">
+Biografía
+</h2>
+
+<div class="bio">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg">
+
+<div>
+
+<p>
+Cristiano Ronaldo dos Santos Aveiro nació el 5 de febrero de 1985 en Madeira, Portugal.
+Desde pequeño mostró un enorme talento para el fútbol y comenzó su carrera profesional
+en el Sporting de Lisboa.
+</p>
+
+<br>
+
+<p>
+Posteriormente brilló en clubes históricos como Manchester United,
+Real Madrid, Juventus y Al Nassr, convirtiéndose en uno de los jugadores más
+importantes y reconocidos de todos los tiempos.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section id="estadisticas" class="reveal">
+
+<h2 class="titulo">
+Estadísticas Destacadas
+</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>900+</h3>
+<p>Goles Oficiales</p>
+</div>
+
+<div class="card">
+<h3>5</h3>
+<p>Balones de Oro</p>
+</div>
+
+<div class="card">
+<h3>35+</h3>
+<p>Títulos Ganados</p>
+</div>
+
+<div class="card">
+<h3>200+</h3>
+<p>Partidos Internacionales</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section id="video" class="reveal">
+
+<h2 class="titulo">
+Mejores Jugadas
+</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/OUKGsb8CpF8"
+title="Cristiano Ronaldo Highlights"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- LOGROS -->
+
+<section id="logros" class="reveal">
+
+<h2 class="titulo">
+Principales Logros
+</h2>
+
+<div class="logros">
+
+<div class="logro">
+🏆 5 veces ganador del Balón de Oro.
+</div>
+
+<div class="logro">
+🏆 Campeón de la Eurocopa 2016 con Portugal.
+</div>
+
+<div class="logro">
+🏆 Múltiple campeón de la UEFA Champions League.
+</div>
+
+<div class="logro">
+🏆 Máximo goleador histórico en varias competiciones.
+</div>
+
+<div class="logro">
+🏆 Récord de goles con la selección portuguesa.
+</div>
+
+<div class="logro">
+🏆 Considerado uno de los mejores futbolistas de la historia.
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Página web dedicada a Cristiano Ronaldo • Proyecto Escolar 2026
+</p>
+
+</footer>
+
+<a href="#inicio" class="top-btn">
+↑
+</a>
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".reveal")
+.forEach(el=>{
+
+let pos = el.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+
+el.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
