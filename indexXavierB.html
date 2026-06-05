@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flan Paradise | Postres Cute</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Hola, bienvenido a Flan Paradise!</h1>
+
+    <header>
+        <div class="logo">🍮 Flan Paradise</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Nuestro Menú</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>El rincón más dulce</h1>
+            <p>Flanes artesanales hechos con amor, suavidad y el toque perfecto de caramelo. ¡Un mimo para tu paladar!</p>
+            <a href="#menu" class="btn">Ver Flanes</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Nuestras Especialidades</h2>
+        <p class="subtitle">Descubre nuestros sabores estrella</p>
+        
+        <div class="grid-flanes">
+            <div class="tarjeta-flan">
+                <div class="imagen-placeholder">🍮</div>
+                <h3>Flan Clásico de Vainilla</h3>
+                <p>El de toda la vida, con un caramelo dorado y una textura tan suave que se derrite en tu boca.</p>
+                <div class="contenedor-compra">
+                    <span class="precio">$4.50</span>
+                    <button class="btn-compra" onclick="reproducirSonido()">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-flan">
+                <div class="imagen-placeholder">☕</div>
+                <h3>Flan de Café Espresso</h3>
+                <p>Para los amantes del café. Un equilibrio perfecto entre el amargor del grano y el dulzor del flan.</p>
+                <div class="contenedor-compra">
+                    <span class="precio">$5.00</span>
+                    <button class="btn-compra" onclick="reproducirSonido()">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-flan">
+                <div class="imagen-placeholder">🍫</div>
+                <h3>Chocoflan (Imposible)</h3>
+                <p>La combinación mística de un pastel de chocolate húmedo abajo y un flan cremoso arriba.</p>
+                <div class="contenedor-compra">
+                    <span class="precio">$5.50</span>
+                    <button class="btn-compra" onclick="reproducirSonido()">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-flan">
+                <div class="imagen-placeholder">🥥</div>
+                <h3>Flan de Coco Estilo Pastel</h3>
+                <p>Con un toque de coco rallado tostado que le da una textura crujiente y tropical irresistible.</p>
+                <div class="contenedor-compra">
+                    <span class="precio">$5.00</span>
+                    <button class="btn-compra" onclick="reproducirSonido()">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <audio id="sonido-clic" src="pozole-pozolito.mp3"></audio>
+
+    <script>
+        function reproducirSonido() {
+            const audio = document.getElementById('sonido-clic');
+            audio.currentTime = 0; // Reinicia el audio si hacen clics rápidos
+            audio.play();
+        }
+    </script>
+
+    <footer id="contacto">
+        <p>♥ Hecho por Xavier Bernal 2M </p>
+    </footer>
+
+</body>
+</html>
