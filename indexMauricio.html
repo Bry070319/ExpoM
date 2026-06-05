@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Milo J | Fan Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#050505;
+    --card:#111111;
+    --primary:#00d4ff;
+    --secondary:#8a2be2;
+    --text:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Fondo animado */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle, rgba(0,212,255,.15) 2px, transparent 2px);
+    background-size:50px 50px;
+    animation:move 20s linear infinite;
+    z-index:-1;
+}
+
+@keyframes move{
+    from{transform:translateY(0);}
+    to{transform:translateY(-100px);}
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.4);
+    z-index:999;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:800;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,10vw,9rem);
+    font-weight:900;
+    line-height:1;
+}
+
+.hero span{
+    background:linear-gradient(
+    90deg,
+    #00d4ff,
+    #8a2be2,
+    #00d4ff);
+    background-size:300%;
+    color:transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+    animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+    0%{background-position:0%}
+    100%{background-position:300%}
+}
+
+.hero p{
+    margin:25px auto;
+    max-width:700px;
+    font-size:1.2rem;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Secciones */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:3rem;
+}
+
+/* Glass */
+
+.glass{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:35px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:
+    translateY(-10px)
+    rotateX(5deg)
+    rotateY(-5deg);
+
+    box-shadow:
+    0 0 20px var(--primary),
+    0 0 40px rgba(0,212,255,.2);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/* Timeline */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    width:4px;
+    height:100%;
+    background:linear-gradient(var(--primary),var(--secondary));
+    transform:translateX(-50%);
+}
+
+.event{
+    width:50%;
+    padding:20px;
+}
+
+.event:nth-child(odd){
+    margin-left:auto;
+}
+
+.event-box{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.event-box:hover{
+    transform:scale(1.05);
+}
+
+/* Galería */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.5s;
+}
+
+.gallery:hover img{
+    filter:brightness(.4);
+}
+
+.gallery img:hover{
+    filter:brightness(1);
+    transform:scale(1.06);
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.stat{
+    text-align:center;
+    background:#111;
+    padding:40px;
+    border-radius:20px;
+}
+
+.stat h2{
+    font-size:3rem;
+    color:var(--primary);
+}
+
+/* Footer */
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:40px;
+    color:#888;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.timeline::before{
+display:none;
+}
+
+.event{
+width:100%;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+    <h1>Hola Fans</h1>
+<header>
+
+<div class="logo">MILO J</div>
+
+<nav>
+<a href="#bio">Biografía</a>
+<a href="#trayectoria">Trayectoria</a>
+<a href="#musica">Música</a>
+<a href="#galeria">Galería</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>MILO <span>J</span></h1>
+
+<p>
+Una experiencia visual inspirada en uno de los artistas más
+destacados de la nueva generación de la música argentina.
+</p>
+
+<a href="#bio" class="btn">Explorar</a>
+
+</div>
+
+</section>
+
+<section id="bio">
+
+<h2 class="title">Biografía</h2>
+
+<div class="glass">
+
+<p>
+Milo J es un artista argentino que ha destacado por su autenticidad,
+su estilo único y su capacidad para conectar con millones de personas
+a través de sus canciones. Su crecimiento dentro de la escena urbana
+ha sido uno de los más impresionantes de los últimos años.
+</p>
+
+</div>
+
+</section>
+
+<section id="trayectoria">
+
+<h2 class="title">Trayectoria</h2>
+
+<div class="timeline">
+
+<div class="event">
+<div class="event-box">
+<h3>2021</h3>
+<p>Comienza a ganar reconocimiento en redes y plataformas musicales.</p>
+</div>
+</div>
+
+<div class="event">
+<div class="event-box">
+<h3>2022</h3>
+<p>Primeras canciones virales y crecimiento acelerado.</p>
+</div>
+</div>
+
+<div class="event">
+<div class="event-box">
+<h3>2023</h3>
+<p>Colaboraciones importantes y expansión internacional.</p>
+</div>
+</div>
+
+<div class="event">
+<div class="event-box">
+<h3>2024</h3>
+<p>Consolidación como una de las figuras jóvenes más influyentes.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="musica">
+
+<h2 class="title">Canciones Destacadas</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>M.A.I</h3>
+<p>Uno de los mayores éxitos de su carrera.</p>
+</div>
+
+<div class="card">
+<h3>Milagrosa</h3>
+<p>Una muestra de su evolución artística.</p>
+</div>
+
+<div class="card">
+<h3>Fruto</h3>
+<p>Una canción muy valorada por sus seguidores.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2 class="title">Galería</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f">
+
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a">
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Impacto</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>+15M</h2>
+<p>Oyentes</p>
+</div>
+
+<div class="stat">
+<h2>+500M</h2>
+<p>Streams</p>
+</div>
+
+<div class="stat">
+<h2>+50</h2>
+<p>Canciones</p>
+</div>
+
+<div class="stat">
+<h2>+100</h2>
+<p>Shows</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 - Fan Experience de Milo J
+</p>
+
+</footer>
+
+</body>
+</html>
