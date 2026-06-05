@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lionel Messi | El GOAT</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(15px);
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:gold;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:gold;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:url('https://wallpapercave.com/wp/wp7476087.jpg');
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.overlay{
+height:100%;
+background:rgba(0,0,0,.6);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:120px;
+color:gold;
+text-shadow:
+0 0 20px gold,
+0 0 40px gold,
+0 0 80px gold;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 20px gold;
+}
+to{
+text-shadow:
+0 0 30px gold,
+0 0 60px gold,
+0 0 100px gold;
+}
+}
+
+.hero p{
+font-size:30px;
+margin:20px;
+}
+
+.btn{
+background:linear-gradient(45deg,gold,#ff8c00);
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:black;
+font-size:18px;
+transition:.4s;
+box-shadow:0 0 25px gold;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* CARRUSEL */
+
+.slider{
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 15s infinite;
+}
+
+.slide{
+width:100%;
+}
+
+.slide img{
+width:100%;
+height:700px;
+object-fit:cover;
+}
+
+@keyframes slide{
+
+0%,30%{
+transform:translateX(0);
+}
+
+35%,65%{
+transform:translateX(-33.33%);
+}
+
+70%,100%{
+transform:translateX(-66.66%);
+}
+
+}
+
+/* SECCIONES */
+
+section{
+padding:100px 10%;
+}
+
+h2{
+text-align:center;
+font-size:50px;
+color:gold;
+margin-bottom:40px;
+}
+
+.historia p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:25px;
+text-align:justify;
+}
+
+/* GALERIA */
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 20px gold,
+0 0 40px gold;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+width:230px;
+padding:35px;
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:20px;
+
+transition:.5s;
+}
+
+.card:hover{
+transform:translateY(-15px);
+box-shadow:
+0 0 20px gold,
+0 0 40px gold;
+}
+
+.card h3{
+font-size:70px;
+color:gold;
+}
+
+.card p{
+font-size:20px;
+}
+
+/* FRASE */
+
+.frase{
+text-align:center;
+background:linear-gradient(45deg,#000,#111,#222);
+}
+
+.frase h2{
+font-size:60px;
+}
+
+.frase p{
+font-size:25px;
+margin-top:20px;
+}
+
+/* BOTON FLOTANTE */
+
+.top-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:gold;
+color:black;
+
+text-decoration:none;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:30px;
+font-weight:bold;
+
+box-shadow:0 0 25px gold;
+
+z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+color:gold;
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:gold;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Hola</h1>
+<nav class="navbar">
+<div class="logo">🐐 MESSI</div>
+
+<ul>
+<li><a href="#historia">Historia</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#logros">Logros</a></li>
+</ul>
+</nav>
+
+<header class="hero">
+
+<div class="overlay">
+
+<h1>LIONEL MESSI</h1>
+
+<p>El mejor futbolista de todos los tiempos</p>
+
+<a href="#historia" class="btn">
+Descubrir su historia
+</a>
+
+</div>
+
+</header>
+
+<section class="slider">
+
+<div class="slides">
+
+<div class="slide">
+<img src="https://wallpapercave.com/wp/wp7476087.jpg">
+</div>
+
+<div class="slide">
+<img src="https://images7.alphacoders.com/122/1223200.jpg">
+</div>
+
+<div class="slide">
+<img src="https://images6.alphacoders.com/555/555980.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section id="historia" class="historia">
+
+<h2>La Historia de una Leyenda</h2>
+
+<p>
+Lionel Andrés Messi nació en Rosario, Argentina, y desde pequeño mostró un talento extraordinario para el fútbol. Su llegada al FC Barcelona cambió para siempre la historia del deporte.
+</p>
+
+<p>
+Con una carrera llena de récords, goles inolvidables y actuaciones históricas, se convirtió en un ícono mundial admirado por millones de personas.
+</p>
+
+<p>
+En 2022 alcanzó la gloria máxima conquistando la Copa Mundial con Argentina y consolidando definitivamente su legado como el GOAT.
+</p>
+
+</section>
+
+<section id="galeria">
+
+<h2>🏆 Sus Balones de Oro</h2>
+
+<div class="galeria">
+
+<img src="https://wp.clutchpoints.com/wp-content/uploads/2023/10/Inter-Miami-news-Lionel-Messi_s-emotional-message-after-winning-8th-Ballon-d_Or.jpg">
+
+<img src="https://www.fcbarcelona.com/fcbarcelona/photo/2019/12/02/abbdc187-9e69-4cdb-8636-541d6b3a7b59/mini__R5I4403.JPG">
+
+<img src="https://images7.alphacoders.com/122/1223200.jpg">
+
+</div>
+
+</section>
+
+<section id="logros">
+
+<h2>⚽ Logros Legendarios</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>8</h3>
+<p>Balones de Oro</p>
+</div>
+
+<div class="card">
+<h3>1</h3>
+<p>Copa del Mundo</p>
+</div>
+
+<div class="card">
+<h3>4</h3>
+<p>Champions League</p>
+</div>
+
+<div class="card">
+<h3>45+</h3>
+<p>Títulos Oficiales</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="frase">
+
+<h2>"Nunca dejé de soñar."</h2>
+
+<p>- Lionel Messi</p>
+
+</section>
+
+<footer>
+
+<p>⚽ Página creada por Abner | Tributo a Lionel Messi ⚽</p>
+
+</footer>
+
+<a href="#" class="top-btn">⬆</a>
+
+</body>
+</html>

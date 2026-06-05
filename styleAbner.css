@@ -1,0 +1,253 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+    135deg,
+    #020024,
+    #090979,
+    #000000);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:999;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.4);
+}
+
+.logo{
+    color:gold;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:gold;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    height:100vh;
+    background:url('https://wallpapercave.com/wp/wp7476087.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    backdrop-filter:blur(3px);
+}
+
+.hero h1{
+    font-size:120px;
+    color:gold;
+    text-shadow:
+    0 0 20px gold,
+    0 0 40px gold,
+    0 0 60px gold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 20px gold;
+    }
+    to{
+        text-shadow:
+        0 0 30px gold,
+        0 0 60px gold,
+        0 0 90px gold;
+    }
+}
+
+.hero p{
+    font-size:32px;
+}
+
+/* BOTON */
+
+.btn{
+    margin-top:20px;
+    padding:18px 40px;
+    border-radius:50px;
+    background:linear-gradient(45deg,gold,#ff8800);
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 0 30px gold;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* CARRUSEL */
+
+.slider{
+    padding:0;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    animation:slide 15s infinite;
+}
+
+.slide{
+    width:100%;
+}
+
+.slide img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+}
+
+@keyframes slide{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    30%{
+        transform:translateX(0);
+    }
+
+    35%{
+        transform:translateX(-33.33%);
+    }
+
+    65%{
+        transform:translateX(-33.33%);
+    }
+
+    70%{
+        transform:translateX(-66.66%);
+    }
+
+    100%{
+        transform:translateX(-66.66%);
+    }
+
+}
+
+/* TARJETAS */
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    transition:.5s;
+}
+
+.card:hover{
+    transform:
+    rotateY(10deg)
+    translateY(-15px);
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 40px gold;
+}
+
+/* GALERIA */
+
+.galeria img{
+    transition:.5s;
+}
+
+.galeria img:hover{
+    transform:
+    scale(1.08)
+    rotate(2deg);
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 50px gold;
+}
+
+/* FRASE */
+
+.frase{
+    background:
+    linear-gradient(
+    45deg,
+    #000,
+    #111,
+    #222);
+
+    padding:120px;
+}
+
+.frase h2{
+    font-size:65px;
+}
+
+/* BOTON FLOTANTE */
+
+.top-btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:gold;
+    color:black;
+
+    text-decoration:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+    font-weight:bold;
+
+    box-shadow:0 0 30px gold;
+
+    z-index:999;
+}
+
+.top-btn:hover{
+    transform:scale(1.15);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:gold;
+    border-radius:10px;
+}
