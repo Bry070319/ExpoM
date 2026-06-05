@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wild Planet | Mundo Animal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#071a0c;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+color:#7CFC00;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#7CFC00;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:5rem;
+color:#7CFC00;
+}
+
+.hero p{
+margin:20px 0;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#7CFC00;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+/* FRASE */
+
+.quote{
+background:#7CFC00;
+color:black;
+text-align:center;
+padding:20px;
+font-size:1.2rem;
+font-weight:bold;
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 8%;
+}
+
+.title{
+font-size:2.5rem;
+margin-bottom:35px;
+color:#7CFC00;
+}
+
+/* TARJETAS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#11291a;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(124,252,0,.4);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+/* ESTADÍSTICAS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+text-align:center;
+}
+
+.stat{
+background:#11291a;
+padding:30px;
+border-radius:20px;
+width:220px;
+}
+
+.stat h2{
+font-size:3rem;
+color:#7CFC00;
+}
+
+/* GALERÍA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CURIOSIDADES */
+
+.facts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.fact{
+background:#11291a;
+padding:25px;
+border-left:5px solid #7CFC00;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:40px;
+}
+
+footer p{
+color:#aaa;
+}
+
+</style>
+</head>
+<body>
+    <h1>Hola</h1>
+
+<header>
+
+<div class="logo">🐾 Wild Planet</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Especies</a>
+<a href="#">Galería</a>
+<a href="#">Curiosidades</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Mundo Animal</h1>
+
+<p>
+Descubre los animales más fascinantes del planeta,
+sus hábitats, comportamientos y datos sorprendentes.
+Explora la naturaleza como nunca antes.
+</p>
+
+<button class="btn">🌍 Explorar</button>
+
+</div>
+
+</section>
+
+<div class="quote">
+🐘 "La grandeza de una nación puede juzgarse por la forma en que trata a sus animales."
+</div>
+
+<section>
+
+<h2 class="title">🦁 Animales Destacados</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d">
+<div class="card-content">
+<h3>León</h3>
+<p>Conocido como el rey de la selva, vive en grupos llamados manadas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46">
+<div class="card-content">
+<h3>Tigre</h3>
+<p>El felino más grande del mundo y excelente cazador.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501706362039-c6e08e4e4d9d">
+<div class="card-content">
+<h3>Elefante</h3>
+<p>Posee una memoria extraordinaria y fuertes lazos familiares.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">📊 Datos del Reino Animal</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>8.7M</h2>
+<p>Especies estimadas</p>
+</div>
+
+<div class="stat">
+<h2>70%</h2>
+<p>De la Tierra es océano</p>
+</div>
+
+<div class="stat">
+<h2>350K</h2>
+<p>Especies de plantas</p>
+</div>
+
+<div class="stat">
+<h2>20K+</h2>
+<p>Especies de aves</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">📸 Galería Salvaje</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5">
+<img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+<img src="https://images.unsplash.com/photo-1444464666168-49d633b86797">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">🧠 Curiosidades</h2>
+
+<div class="facts">
+
+<div class="fact">
+🐙 Los pulpos tienen tres corazones y sangre azul.
+</div>
+
+<div class="fact">
+🦒 La jirafa puede medir más de 5 metros de altura.
+</div>
+
+<div class="fact">
+🐧 Los pingüinos pueden reconocer a su pareja por la voz.
+</div>
+
+<div class="fact">
+🐬 Los delfines tienen nombres propios mediante sonidos únicos.
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>🐾 Wild Planet</h2>
+<p>Explorando la vida salvaje del planeta.</p>
+
+</footer>
+
+</body>
+</html>
